@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script async="async" src="https://www.google.com/adsense/search/ads.js"></script>
+
+<!-- other head elements from your page -->
+
+<script type="text/javascript" charset="utf-8">
+(function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(
+  arguments)},g[o]['t']=1*new Date})(window,'_googCsa');
+</script>
+
+
+  </head>
+
+  <body>
+    <h1>Welcome!</h1>
+    <input type="button" id="btn" value="hit" onclick="myfunc();" >
+              
+<div id="ad" style="display:none"></div>
+
+<script type="text/javascript" charset="utf-8">
+
+  var pageOptions = {
+    "pubId": "pub-9616389000213823", // Make sure this the correct client ID!
+    "query": "hotels",
+    "adPage": 1,
+    "adtest": "on"
+  };
+
+  var adblock1 = {
+    "container": "ad",
+    "width": "700",
+    "number": 2
+  };
+
+  _googCsa('ads', pageOptions, adblock1);
+  
+  var i=0;
+function myfunc()
+{
+i++;
+if(i%5==0)
+{document.getElementById("ad").style.display="block";
+setTimeout(function () {document.getElementById("ad").style.display="none"}, 10000);
+}
+if(i%5==1)
+{document.getElementById("ad").style.display="none";}
+}
+
+</script>
+
+        
+  </body>
+
+</html>
