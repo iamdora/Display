@@ -40,15 +40,17 @@
   _googCsa('ads', pageOptions, adblock1);
   
   var i=0;
+  var myVar;
 function myfunc()
 {
 i++;
 if(i%5==0)
 {document.getElementById("ad").style.display="block";
-setTimeout(function () {document.getElementById("ad").style.display="none"}, 30000);
+myVar = setTimeout(function () {document.getElementById("ad").style.display="none"}, 30000);
 }
 if(i%5==1)
-{document.getElementById("ad").style.display="none";}
+{clearTimeout(myVar);
+  document.getElementById("ad").style.display="none";}
 }
 
 </script>
